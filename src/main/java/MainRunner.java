@@ -6,7 +6,7 @@ public class MainRunner {
 	public static void main(String[] args) {
 
 		String[][] keywordsandAswers =
-
+				
 				{ { "how", "is", "weather", "it's nice!" }, { "how", "is", "food", "I'm a robot, I don't eat food!" },
 						{ "where", "do", "you", "live", "in your laptop" } };
 
@@ -42,6 +42,11 @@ public class MainRunner {
 			System.out.println(keywordsandAswers[indexMaxMatching][indexLast]);
 		}
 		System.out.println("I'll see you");
+	}
+	
+	public String buildWeatherAnswer(String city) {
+		Weather w = new Weather(city);
+		return "we have " + ;
 	}
 
 }
