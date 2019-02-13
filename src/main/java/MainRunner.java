@@ -46,7 +46,7 @@ public class MainRunner {
 	
 	public String buildWeatherAnswer(String city) {
 		Weather w = new Weather(city);
-		return "we have " + ;
+		return "we have "  ;
 	}
 
 }
