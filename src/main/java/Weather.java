@@ -21,7 +21,6 @@ public class Weather {
         String requestUrl = "http://api.openweathermap.org/data/2.5/weather?units=metric&APPID="+API_ID+"&q="+city;
         try{
             HttpResponse<JsonNode> jsonResponse = Unirest.get(requestUrl).asJson();
-            System.out.println();
             json = jsonResponse.getBody().toString();
             setWeatherInfo();
             setTemp();
