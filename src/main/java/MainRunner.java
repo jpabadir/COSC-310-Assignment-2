@@ -1,10 +1,11 @@
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class MainRunner {
 
 	public static void main(String[] args) {
-
+		Timer timer = new Timer();
 		String[][] keywordsandAswers =
 
 				{ { "how", "is", "weather", buildWeatherAnswer("Kelowna") },
@@ -24,6 +25,7 @@ public class MainRunner {
 		
 		Scanner in = new Scanner(System.in); // to read user's input
 		while (true) {
+			if()
 			String currentInput = in.nextLine(); // read the user's input
 			if (currentInput.equals("bye"))
 				break;
@@ -52,7 +54,8 @@ public class MainRunner {
 
 			}
 			int indexLast = keywordsandAswers[indexMaxMatching].length - 1;
-			System.out.println(keywordsandAswers[indexMaxMatching][indexLast]);
+			System.out.println(keywordsandAswers[indexMaxMatching][indexLast]); // respond with the right answer
+			timer.start();
 		}
 		in.close();
 		System.out.println("I'll see you");
@@ -63,8 +66,13 @@ public class MainRunner {
 		return "we have " + w.getWeatherDesc() + " in " + city + " and the temperature is " + w.getTemp() + " °C";
 	}
 	
-//	public int[] buildMatchingLevelsArray(String[] inputArray) {
-//		
-//	}
+	
+	private static class Timer {
+		Date date = new Date();
+		double startTime;  
+		void start() {
+			startTime = date.getTime();
+		}
+	}
 
 }
