@@ -11,12 +11,14 @@ public class MainRunner {
 		Timer timer = new Timer();
 		//any specials with a key have separate checking conditions for response
 		//to get key/index in list, you can say the statement and then say: /get match
+		//NOTE: you can split words using // for different word matches
+		// (ie. what//how => can mean either what or how can be used. Be sure not to use the same word!)
 		String[][] keywordsandAswers ={
-				{ "how", "is", "weather", sandra.getWeather("Kelowna") },
+				{ "how//what", "is", "weather", sandra.getWeather("Kelowna") },
 				{ "how", "is", "weather", "in", "[city/place]"}, //key=1, special
 				{ "how", "is", "food", "I'm a robot, I don't eat food!" },
-				{ "where", "do", "you", "live", "in your laptop" },
-				{ "what", "is", "name", sandra.getName() } };
+				{ "where", "do", "you", "live", "On your hard drive" },
+				{ "what", "is", "your", "name", sandra.getName() } };
 		// in this 2D array, we are storing the keywords and the answer they match to.
 		// Each row contains one answer, and all the corresponding keywords
 		sandra.createResponseList(keywordsandAswers);

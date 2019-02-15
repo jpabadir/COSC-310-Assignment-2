@@ -37,15 +37,19 @@ public class Bot {
             int pos = 0;
             //goes through list of input words
             for (int y = 0; y < in.length; y++) {
-                //if there is a match, the position increments, and once all
-                //words from keywords are matched it is the best match
-                if (in[y].toLowerCase().equals((keyAns[x][pos]).toLowerCase())) {
-                    pos++;
-                    //if all keywords are matched
-                    if (pos >= keyAns[x].length - 1 && matchCount < pos) {
-                        matchCount = pos;
-                        bestMatch = x;
-                        y = in.length;
+                //split all words with a backslash (/) and compare each split word individually
+                String[] keys = keyAns[x][pos].split("//");
+                for(int i = 0; i<keys.length;i++) {
+                    //if there is a match, the position increments, and once all
+                    //words from keywords are matched it is the best match
+                    if (in[y].toLowerCase().equals((keys[i]).toLowerCase())) {
+                        pos++;
+                        //if all keywords are matched
+                        if (pos >= keyAns[x].length - 1 && matchCount < pos) {
+                            matchCount = pos;
+                            bestMatch = x;
+                            y = in.length;
+                        }
                     }
                 }
             }
