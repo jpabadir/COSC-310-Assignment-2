@@ -5,11 +5,17 @@ public class Bot {
     String name;
     String[][] keyAns;
     int bestMatch;
+    SpellCheck spell;
 
     Bot(String name) {
         this.name = name;
         System.out.println("Hi, my name is Sandra");
         bestMatch = -1;
+        //initialize spell checker
+        try {
+            spell = new SpellCheck("");
+        }catch (Exception e){
+        }
     }
 
     public void createResponseList(String[][] list) {
@@ -23,6 +29,12 @@ public class Bot {
                 System.out.println(bestMatch);
             return;
         }
+
+        //try to check for spelling errors
+        try {
+            spell.setNewSentence(input);
+        }catch (Exception e){}
+        input = spell.getCorrectedSentence();
 
         //remove any non-alphabet/space characters
         input = input.replaceAll("[^A-Za-z0-9 ]", "");
