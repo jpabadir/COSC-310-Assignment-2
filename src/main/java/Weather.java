@@ -6,7 +6,7 @@ import com.mashape.unirest.http.*;
  */
 public class Weather {
     String city;
-    final String  API_ID = "c9df1e75b391932eeaa45a83ef9d9860"; //DONT CHANGE, its under my account
+    final String API_ID = "c9df1e75b391932eeaa45a83ef9d9860"; //DONT CHANGE, needed for auth
     String json;
     String weatherMain; //Example: Clear
     String weatherDesc; //Example: clear sky
@@ -25,7 +25,10 @@ public class Weather {
             setWeatherInfo();
             setTemp();
         }catch(Exception e){
-            e.printStackTrace();
+            //set value to unknown if city is not found
+            temp = "-999";
+            weatherMain = "unknown";
+            weatherDesc = "unknown";
         }
     }
     /**
@@ -33,7 +36,6 @@ public class Weather {
      * @return Temperature
      */
     public String getTemp(){
-
         return temp;
     }
     public String getWeatherMain(){
@@ -64,6 +66,8 @@ public class Weather {
      * @throws Exception
      */
     public void setTemp(){
+
+        //attempt to retrieve value of temp from json object
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonObject body = gson.fromJson(json, JsonObject.class);
         JsonObject insideBody = body.getAsJsonObject("main");
