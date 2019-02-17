@@ -1,5 +1,4 @@
 
-import java.util.Date;
 import java.util.Scanner;
 
 public class MainRunner {
@@ -8,7 +7,6 @@ public class MainRunner {
 		//initialize bot with a name
 		Bot sandra = new Bot("Sandra");
 
-		Timer timer = new Timer();
 		//any specials with a key have separate checking conditions for response
 		//to get key/index in list, you can say the statement and then say: /get match
 		//NOTE: you can split words using // for different word matches
@@ -36,14 +34,6 @@ public class MainRunner {
 		}
 		in.close();
 		System.out.println("I'll see you");
-	}
-
-	private static class Timer {
-		Date date = new Date();
-		double startTime;  
-		void start() {
-			startTime = date.getTime();
-		}
 	}
 
 }
