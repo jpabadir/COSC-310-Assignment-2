@@ -16,4 +16,17 @@ Bot Class:
 -getResponse(input): this method does the pattern matching and input checking.
     If there are any special input matches it calls getSpecial().
 
-Weather Class:
+Weather Class: Gather weather information of a city
+-weather(location): Initialize Weather Class and perform a GET request to open weather API
+-getTemp(): return the temperature of the city
+-getWeatherMain(): return the main description of the weather
+-getWeatherDesc(): this method returns a more thorough description of the city's weather
+-setWeatherInfo(): this method processes parse the given JSON and sets the weather information fields
+-setTemp(): parse given JSON and gets the weather temperature
+
+SpellCheck class : Perform a spelling check on a sentence
+-SpellCheck(): Constructor for class and call setNewSentence method
+-setNewSentence(sentence): set new sentence for the class and call process method
+-process(): process the given sentence and set fixed sentence member field with the corrected sentence (if any)
+-getCorrectedSentence(): returns the corrected sentence
+-getRawSentence(): returns the unprocessed sentence, if needed
