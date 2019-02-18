@@ -3,7 +3,6 @@ Class Structure
 Main Class:
 -Main(): This method intializes the Bot and sets all needed variables for it.
     It also asks the user for input and then passes it to the Bot to pattern match.
--Timer: ?
 
 Bot Class:
 -Bot(name): initializing method, sets name of bot
