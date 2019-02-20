@@ -20,6 +20,11 @@ public class Bot {
 
     public void createResponseList(String[][] list) {
         keyAns = list;
+        for(int x = 0; x<keyAns.length;x++){
+            for(int y = 0; y<keyAns[x].length-1;y++){
+                keyAns[x][y] = keyAns[x][y].replaceAll("[^A-Za-z0-9 ]", "");
+            }
+        }
     }
 
     public void getResponse(String input) {
@@ -40,6 +45,8 @@ public class Bot {
         input = input.replaceAll("[^A-Za-z0-9 ]", "");
         //split input into separate words
         String[] in = input.split(" ");
+
+        System.out.println(input);
 
         //find best match for response
         bestMatch = -1;

@@ -24,8 +24,8 @@ public class MainRunner {
 				{ "Can", "you", "keep", "secret", "go ahead"},
 				{ "Hello", "We've said hi already..."},
 				{ "I", "was", "reading", "news", "oh yeah?"},
-				{ "They", "are", "building", "new", "cafe", "on", "ubco", "campus", "oh I heard about that! Do you want to go have coffee sometime?"},
-				{ "You", "can't", "have", "cofee", "you're", "a", "robot", "oh yeah... That's true..."},
+				{ "They", "are", "building", "new", "cafe", "on", "campus", "oh I heard about that! Do you want to go have coffee sometime?"},
+				{ "You", "can't", "have", "coffee", "you're", "a", "robot", "oh yeah... That's true..."},
 				{ "Anyways", "what's", "up?", "not much, just talking with you"},
 				{ "You're", "fun!", "thanks"},
 				{ "What's", "for", "dinner", "do you only ever talk about food?"},
@@ -37,10 +37,10 @@ public class MainRunner {
 				{ "I'll", "tell", "you", "movie", "quotes,", "you'll", "tell", "me", "where,", "they're", "from", "okay, but I'm a robot, I'm unbeatable"},
 				{ "Stop", "bragging.", "let", "it", "go,", "let", "it", "go", "too easy! The cold never bothered me anyway."},
 				{ "Life", "is", "like", "a", "box", "of", "chocolates", "that's literally from my favorite movie"},
-				{ "Who's", "gonna", "save", "the", "world", "tonight?", "that's a song..."},
+				{ "Who", "gonna", "save", "the", "world", "tonight?", "that's a song..."},
 				{ "Tsamina", "mina", "eh", "eh", "waka waka, eh eh"},
 				{ "You're", "pretty", "good", "thanks"},
-				{ "Your", "turn", "May the foce be with you"},
+				{ "Your", "turn", "May the force be with you"},
 				{ "Ah", "see", "you're", "not", "that", "smart", "Sorry, I could not... Hehehe just kiddig I got that."},
 				{ "How", "are", "you", "good thanks"}
 				};
