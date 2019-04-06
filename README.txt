@@ -1,3 +1,6 @@
+My name: Jean-Philippe Abadir
+
+
 Class Structure
 
 MainRunner Class:
